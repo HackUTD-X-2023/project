@@ -1,0 +1,10 @@
+@font-face {
+   font-family: 'Work';
+   src: url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap') format('truetype');
+ }
+
+form, label {
+   font-size: 18px;
+   font-family: 'Arial';
+   font-face: 'Work'
+}
