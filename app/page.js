@@ -46,12 +46,18 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const loanAmount = homeValue - downPayment;
+    const debt = Number(carPayment) + Number(studentLoan) + Number(cardPayment);
+    const ltv = loanAmount/homeValue;
+    const dti = (Number(mortgage) + debt)/income;
+    const fedti = mortgage/income;
+
     const res = await fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ creditScore: creditScore, ltv: income, dti: income, fedti: income }),
+      body: JSON.stringify({ creditScore: Number(creditScore), ltv: ltv, dti: dti, fedti: fedti }),
     });
 
     console.log(await res.json())
