@@ -85,52 +85,49 @@ export default function Home() {
   return (
     <main>
       <form className='flex flex-col gap-y-8 w-full'>
-        <div className='flex flex-row'>
-          <label htmlFor="email">Email: </label>
-          <input type="email" name="email" /> <br />
-        </div>
-
-        <div>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="CarPayment">Monthly Car Payment: </label>
           <input type="number" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="StudentLoan">Student Loan Payment: </label>
-          <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" /><br />
+          <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="Mortgage">Est. Monthly Mortgage Payment: </label>
-          <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" /><br />
+          <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="CreditScore">Credit Score: </label>
-          <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" /><br />
+          <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="Income">Gross Monthly Income: </label>
-          <input type="Number" value={income} onChange={handleIncomeChange} name="Income" /><br />
+          <input type="Number" value={income} onChange={handleIncomeChange} name="Income" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="CreditCardPayment">Monthly Credit Card Payment: </label>
-          <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" /><br />
+          <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="HomeAppraisedValue">Home Appraised Value: </label>
-          <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" /><br />
+          <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <div className='flex flex-row'>
+        <div className='flex flex-row gap-x-3'>
           <label htmlFor="DownPayment">Down Payment Amount: </label>
-          <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" /><br />
+          <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
         </div>
 
-        <button type="submit" name="submit" onClick={handleSubmit}>Submit</button>
+        <div className='flex flex-row w-full'>
+          <button type="submit" name="submit" onClick={handleSubmit} className='border-2 w-fit px-11 py-2 border-indigo-500'>Submit</button>
+        </div>
       </form>
       {loading ? <p>Loading...</p> : <p>{res}</p>}
     </main>
