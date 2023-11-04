@@ -1,7 +1,7 @@
-import { Inter } from 'next/font/google'
+import { Work_Sans } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Work_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
