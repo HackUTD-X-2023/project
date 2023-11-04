@@ -83,7 +83,7 @@ export default function Home() {
   }
 
   return (
-    <main className='w-max items-center flex flex-col w-screen gap-y-16'>
+    <main className='items-center flex flex-col w-screen gap-y-16'>
       <div>
         <form className='flex flex-col w-fit'>
           <div className='flex flex-col gap-x-3'>
