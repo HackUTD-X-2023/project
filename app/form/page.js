@@ -71,7 +71,7 @@ export default function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ creditScore: Number(creditScore), ltv: ltv, dti: dti, fedti: fedti }),
+      body: JSON.stringify({ creditScore: creditScore, ltv: (ltv * 100).toFixed(2) + '%', dti: (dti * 100).toFixed(2) + '%', fedti: (fedti * 100).toFixed(2) + '%' }),
     });
 
     const resJson = await res.json();
