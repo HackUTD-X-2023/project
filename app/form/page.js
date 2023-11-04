@@ -132,8 +132,8 @@ export default function Home() {
         </form>
       </div>
 
-      <div className='border-2 p-4 w-screen m-4'>
-        {loading ? <p>Loading...</p> : <p className='w-max h-48'>{res}</p>}
+      <div className='border-2 p-4 w-screen m-4 whitespace-pre-wrap'>
+        {loading ? <p>Loading...</p> : <p className='h-80 whitespace-normal'>{res}</p>}
       </div>
     </main>
   )
