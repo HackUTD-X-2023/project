@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='p-2'>
+        <div className='p-0'>
           {children}
         </div>
       </body>
