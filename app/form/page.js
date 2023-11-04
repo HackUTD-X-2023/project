@@ -84,33 +84,51 @@ export default function Home() {
 
   return (
     <main>
-      <form>
-        <label htmlFor="email">Email: </label>
-        <input type="email" name="email" /> <br />
+      <form className='flex flex-col gap-y-8 w-full'>
+        <div className='flex flex-row'>
+          <label htmlFor="email">Email: </label>
+          <input type="email" name="email" /> <br />
+        </div>
 
-        <label htmlFor="CarPayment">Monthly Car Payment: </label>
-        <input type="number" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" /><br />
+        <div>
+          <label htmlFor="CarPayment">Monthly Car Payment: </label>
+          <input type="number" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+        </div>
 
-        <label htmlFor="StudentLoan">Student Loan Payment: </label>
-        <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="StudentLoan">Student Loan Payment: </label>
+          <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" /><br />
+        </div>
 
-        <label htmlFor="Mortgage">Est. Monthly Mortgage Payment: </label>
-        <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="Mortgage">Est. Monthly Mortgage Payment: </label>
+          <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" /><br />
+        </div>
 
-        <label htmlFor="CreditScore">Credit Score: </label>
-        <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="CreditScore">Credit Score: </label>
+          <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" /><br />
+        </div>
 
-        <label htmlFor="Income">Gross Monthly Income: </label>
-        <input type="Number" value={income} onChange={handleIncomeChange} name="Income" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="Income">Gross Monthly Income: </label>
+          <input type="Number" value={income} onChange={handleIncomeChange} name="Income" /><br />
+        </div>
 
-        <label htmlFor="CreditCardPayment">Monthly Credit Card Payment: </label>
-        <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="CreditCardPayment">Monthly Credit Card Payment: </label>
+          <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" /><br />
+        </div>
 
-        <label htmlFor="HomeAppraisedValue">Home Appraised Value: </label>
-        <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="HomeAppraisedValue">Home Appraised Value: </label>
+          <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" /><br />
+        </div>
 
-        <label htmlFor="DownPayment">Down Payment Amount: </label>
-        <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" /><br />
+        <div className='flex flex-row'>
+          <label htmlFor="DownPayment">Down Payment Amount: </label>
+          <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" /><br />
+        </div>
 
         <button type="submit" name="submit" onClick={handleSubmit}>Submit</button>
       </form>
