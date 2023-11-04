@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
 
@@ -43,14 +43,28 @@ export default function Home() {
     setDownPayment(e.target.value);
   }
 
+  const [res, setRes] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log("Loading: " + loading);
+  }, [loading]);
+
+  useEffect(() => {
+    console.log("res: " + res);
+  }, [res]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+    console.log("Loading: " + loading)
+
     const loanAmount = homeValue - downPayment;
     const debt = Number(carPayment) + Number(studentLoan) + Number(cardPayment);
-    const ltv = loanAmount/homeValue;
-    const dti = (Number(mortgage) + debt)/income;
-    const fedti = mortgage/income;
+    const ltv = loanAmount / homeValue;
+    const dti = (Number(mortgage) + debt) / income;
+    const fedti = mortgage / income;
 
     const res = await fetch('/api', {
       method: 'POST',
@@ -60,7 +74,12 @@ export default function Home() {
       body: JSON.stringify({ creditScore: Number(creditScore), ltv: ltv, dti: dti, fedti: fedti }),
     });
 
-    console.log(await res.json())
+    const resJson = await res.json();
+    console.log(resJson.response.choices[0].message.contentson)
+
+    setRes(resJson.response.choices[0].message.content)
+
+    setLoading(false);
   }
 
   return (
@@ -95,6 +114,7 @@ export default function Home() {
 
         <button type="submit" name="submit" onClick={handleSubmit}>Submit</button>
       </form>
+      {loading ? <p>Loading...</p> : <p>{res}</p>}
     </main>
   )
 }
