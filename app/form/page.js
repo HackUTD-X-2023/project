@@ -272,7 +272,7 @@ export default function Home() {
         {inputPage ? <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center ml-3"></div>
           : <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center mr-3 justify-self-end"></div>
         }
-        <button className="nav-button text-sky-100 z-20" name="input" onClick={handleFormChange}>Input</button>
+        <button className="nav-button text-sky-100 z-20" name="input" onClick={handleFormChange}>Mae I buy?</button>
         <button className="nav-button text-sky-100 z-20" name="data" onClick={handleChartChange}>Charts</button>
       </div>
 
