@@ -91,10 +91,10 @@ export default function Home() {
 
   return (
     <main className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
-      <div class="fixed top-8 bg-gray-800 w-[24rem] h-12 rounded-xl flex-row content-evenly">
-        <button className="nav-button self-center" name="input">Input</button>
-        <button className="nav-button self-center" name="results">Results</button>
-        <button className="nav-button self-center" name="data">Data</button>
+      <div class="grid grid-cols-3 fixed top-8 bg-gray-800 w-[24rem] h-12 rounded-xl flex-row place-content-evenly">
+        <button className="nav-button text-sky-100" name="input">Input</button>
+        <button className="nav-button text-sky-100" name="results">Results</button>
+        <button className="nav-button text-sky-100" name="data">Data</button>
       </div>
 
       
