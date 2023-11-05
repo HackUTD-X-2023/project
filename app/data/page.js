@@ -11,6 +11,7 @@ ChartJS.defaults.color = '#FFFFFF';
 
 export const options = {
     responsive: true,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
         position: 'top',
@@ -18,6 +19,20 @@ export const options = {
       title: {
         display: true,
         text: "Why didn't I qualify?",
+      },
+    },
+  };
+
+  export const options2 = {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: "Approval Rate",
       },
     },
   };
@@ -73,9 +88,12 @@ export default function Data() {
     console.log(formattedDataLossReasons.datasets);
   return (
     <main>
-        <div className="bg-black opacity-90">
-          <Doughnut data={formattedDataSuccess}></Doughnut>
+        <div className="bg-black opacity-90 columns-2 gap-20">
+          <div className='width-30'>
+          <Doughnut options={options2} data={formattedDataSuccess}></Doughnut>
+          </div><div className='w-38 justify-center align-center'>
           <Bar options={options} data={formattedDataLossReasons} />
+          </div>
         </div>
     </main>
   )
