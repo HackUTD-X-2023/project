@@ -90,15 +90,15 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
-      <div class="grid grid-cols-3 fixed top-8 bg-gray-800 w-[24rem] h-12 rounded-xl flex-row place-content-evenly">
+    <main className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16 -z-20">
+      <div class="grid grid-cols-3 fixed top-8 bg-gray-800 w-[24rem] h-12 rounded-xl flex-row place-content-evenly opacity-90 z-20">
         <button className="nav-button text-sky-100" name="input">Input</button>
         <button className="nav-button text-sky-100" name="results">Results</button>
         <button className="nav-button text-sky-100" name="data">Data</button>
       </div>
 
       
-      <div className="bg-grey-900 mt-24 h-64 w-[128rem]">
+      <div className="bg-gradient-to-r from-gray-700 to-gray-700 relative mt-24 w-1/2 py-10 px-2 rounded-3xl">
         <form className='flex flex-row justify-center gap-8'>
           <div class="flex-col">
 
