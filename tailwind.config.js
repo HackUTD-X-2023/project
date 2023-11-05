@@ -18,7 +18,7 @@ module.exports = {
         
       },
       color: {
-        cyan:{
+        sky:{
           400: '#3bb4ed',
         }
       }

@@ -90,56 +90,64 @@ export default function Home() {
   }
 
   return (
-    <main className='items-center flex flex-col w-screen gap-y-16'>
-      <div>
-        <form className='flex flex-col w-fit'>
+    <main className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
+      <div className="bg-grey-900 m-10 z-10 h-64 w-[128rem]">
+        <form className='flex flex-row justify-center gap-8'>
+          <div class="flex-col">
+
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="CarPayment">Monthly Car Payment: </label>
-            <input type="number" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" className='input-field' /><br />
           </div>
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="StudentLoan">Student Loan Payment: </label>
-            <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" class="input-field"/><br />
           </div>
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="Mortgage">Est. Monthly Mortgage Payment: </label>
-            <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" class="input-field"/><br />
           </div>
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="CreditScore">Credit Score: </label>
-            <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" className='input-field' /><br />
           </div>
+
+          </div>
+
+          <div class="flex-col">
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="Income">Gross Monthly Income: </label>
-            <input type="Number" value={income} onChange={handleIncomeChange} name="Income" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="Number" value={income} onChange={handleIncomeChange} name="Income" className='input-field' /><br />
           </div>
+          
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="CreditCardPayment">Monthly Credit Card Payment: </label>
-            <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" className='input-field' /><br />
           </div>
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="HomeAppraisedValue">Home Appraised Value: </label>
-            <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" className='input-field' /><br />
           </div>
 
           <div className='flex flex-col gap-x-3'>
             <label htmlFor="DownPayment">Down Payment Amount: </label>
-            <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" className='border-2 focus:ring-indigo-500 ring-2 outline-0' /><br />
+            <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" className='input-field' /><br />
           </div>
-
-          <div className='flex flex-row w-max'>
-            <button className="rounded-2xl mt-6 text-xl text-white bg-sky-400 h-16 w-64 hover:bg-sky-600 transition duration-150 focus:ring focus:ring-sky-200" type="submit" name="submit" onClick={handleSubmit}>Submit</button>
+            <div className='flex flex-row w-max'>
+              <button className="rounded-2xl mt-6 text-xl text-white bg-sky-400 h-16 w-64 hover:bg-sky-500 transition duration-150 focus:ring focus:ring-sky-300" type="submit" name="submit" onClick={handleSubmit}>Submit</button>
+            </div>
           </div>
+          
         </form>
       </div>
 
-      <div className='border-2 p-4 w-screen m-4 whitespace-pre-wrap'>
+      <div className='p-4 w-screen m-4 whitespace-pre-wrap'>
         {loading ? <div>
           <svg aria-hidden="true" className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -152,3 +160,25 @@ export default function Home() {
     </main>
   )
 }
+
+/*
+export default function nav(){
+  return(
+    <>
+    <div className="static bg-[url('/cover2.jpg')]"></div>
+    <div className="fixed flex flex-row justify-start w-screen">
+    <div className="fixed flex w-[16rem] flex-col justify-center h-screen ml-6">
+      <div className="bg-slate-400 h-[24rem] rounded-3xl flex flex-col justify-evenly">
+        <button className="nav-button text-black" name="input">Input</button>
+        <button className="nav-button" name="results">Results</button>
+        <button className="nav-button" name="data">Data</button>
+      </div>
+    </div>
+    <div className="rounded-[24] flex flex-row justify-center w-[128rem]"></div>
+    <div className="flex">
+      <Home class="result"></Home>
+    </div>
+    </div>
+    </>
+  )
+}*/
