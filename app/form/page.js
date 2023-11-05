@@ -90,40 +90,48 @@ export default function Home() {
 
   const [carPayment, setCarPayment] = useState();
   const handleCarPaymentChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setCarPayment(e.target.value);
   }
   const [studentLoan, setStudentLoan] = useState();
   const handleStudentLoanChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setStudentLoan(e.target.value);
   }
 
   const [mortgage, setMortgage] = useState();
   const handleMortgageChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setMortgage(e.target.value);
   }
 
   const [creditScore, setCreditScore] = useState();
   const handleCreditScoreChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setCreditScore(e.target.value);
   }
 
   const [income, setIncome] = useState();
   const handleIncomeChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setIncome(e.target.value);
   }
 
   const [cardPayment, setCardPayment] = useState();
   const handleCardPaymentChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setCardPayment(e.target.value);
   }
 
   const [homeValue, setHomeValue] = useState();
   const handleHomeValueChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setHomeValue(e.target.value);
   }
 
   const [downPayment, setDownPayment] = useState();
   const handleDownPaymentChange = (e) => {
+    if(Number(e.target.value) != NaN)
     setDownPayment(e.target.value);
   }
 
