@@ -154,11 +154,10 @@ export default function Home() {
     e.preventDefault();
     setSubbed(true);
     setLoading(true);
-    await delay(50)
+
     if(inputPage)
       document.getElementById("goated").scrollIntoView({ block: 'end',  behavior: 'smooth' });
-    await delay(5000);
-    /*
+
     console.log("Loading: " + loading)
 
     const loanAmount = homeValue - downPayment;
@@ -176,13 +175,9 @@ export default function Home() {
     });
 
     const resJson = await res.json();
-    console.log(resJson.response.choices[0].message.contentson)
-
     setRes(resJson.response.choices[0].message.content)
-    */
-    setRes("Error fetching personalized summary");
+
     setLoading(false);
-    await delay(50)
     if(inputPage)
       document.getElementById("goated").scrollIntoView({ block: 'end',  behavior: 'smooth' });
   }

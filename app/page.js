@@ -7,8 +7,8 @@ export default function Home() {
   return (
 
     <main className="bg-[url('/cover.jpg')] h-screen bg-no-repeat bg-cover relative z-10 flex flex-col justify-center">
-      <div className='w-full mb-64 ml-96'>
-        <img src='/logotype.svg' className='w-48' />
+      <div className='w-full mb-96 ml-72'>
+        <img src='/logotype.svg' className='w-96' />
       </div>
       <div className='absolute mt-40 ml-52 px-16 py-8 bg-gray-900 w-fit rounded-3xl shadow-lg shadow-gray-700'>
         <div className='my-10 flex flex-col gap-y-10 items-center'>
