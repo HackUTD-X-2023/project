@@ -248,11 +248,14 @@ export default function Home() {
   </div>
 : <div></div>)]
 
-const chartPage = [<div className='width-30'>
+const chartPage = [
+<div className='grid grid-cols-2 bg-gradient-to-r from-gray-700 to-gray-700 relative mt-24 mb-16 w-2/3 text-center py-6 px-2 rounded-3xl text-white w-screen m-8 whitespace-pre-wrap center-content'>
+<div className='width-30'>
 <Doughnut options={options2} data={formattedDataSuccess}></Doughnut>
-</div>,
+</div>
 <div className='w-38 justify-center align-center'>
 <Bar options={options} data={formattedDataLossReasons} />
+</div>
 </div>]
 
   return (
