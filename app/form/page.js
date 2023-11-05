@@ -265,7 +265,7 @@ const chartPage = [
 </div>]
 
   return (
-    <main id="goated" className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
+    <main id="goated" className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen h-screen gap-y-16">
       <div class="grid grid-cols-2 fixed top-8 bg-gray-800 w-[15rem] h-12 rounded-xl flex-row place-content-evenly z-20 opacity-90">
         { inputPage ? <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center ml-3"></div>
         : <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center mr-3 justify-self-end"></div>
