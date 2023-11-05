@@ -134,7 +134,7 @@ export default function Home() {
           </div>
 
           <div className='flex flex-row w-max'>
-            <button type="submit" name="submit" onClick={handleSubmit} className='border-2 w-fit px-11 py-2 border-indigo-500'>Submit</button>
+            <button className="rounded-2xl mt-6 text-xl text-white bg-sky-400 h-16 w-64 hover:bg-sky-600 transition duration-150 focus:ring focus:ring-sky-200" type="submit" name="submit" onClick={handleSubmit}>Submit</button>
           </div>
         </form>
       </div>
