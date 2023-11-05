@@ -184,7 +184,7 @@ export default function Home() {
       document.getElementById("goated").scrollIntoView({ block: 'end',  behavior: 'smooth' });
   }
 
-  const inputComp = [<div className="bg-gradient-to-r from-gray-700 to-gray-700 relative mt-24 w-1/2 py-10 px-2 rounded-3xl">
+  const inputComp = [<div className="bg-gradient-to-r shadow-md shadow-gray-700 from-gray-900 to-gray-900 relative mt-24 w-1/2 py-10 px-2 rounded-3xl">
   <form className='flex flex-row justify-center gap-8'>
     <div class="flex-col">
 
@@ -239,7 +239,7 @@ export default function Home() {
       </div>
 </div>,
 
-(subbed ? <div className='bg-gradient-to-r from-gray-700 to-gray-700 relative mt-2 w-5/6 text-center py-4 px-2 rounded-3xl text-white m-4 whitespace-pre-wrap center-content'>
+(subbed ? <div className='bg-gradient-to-r shadow-md shadow-gray-700 from-gray-900 to-gray-900 relative mt-2 w-5/6 text-center py-4 px-2 rounded-3xl text-white m-4 whitespace-pre-wrap center-content'>
   {loading ? <div className='flex flex-row justify-center'>
     <svg aria-hidden="true" className="w-20 h-20 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -252,7 +252,7 @@ export default function Home() {
 : <div></div>)]
 
 const chartPage = [
-<div className='grid grid-cols-2 bg-gradient-to-r from-gray-700 to-gray-700 relative mt-24 mb-16 w-2/3 text-center py-6 px-2 rounded-3xl text-white w-screen m-8 whitespace-pre-wrap center-content'>
+<div className='grid grid-cols-2 bg-gradient-to-r shadow-md shadow-gray-700 from-gray-900 to-gray-900 relative mt-24 mb-16 w-2/3 text-center py-6 px-2 rounded-3xl text-white w-screen m-8 whitespace-pre-wrap center-content'>
 <div className='width-30'>
 <Doughnut options={options2} data={formattedDataSuccess}></Doughnut>
 </div>
@@ -264,8 +264,8 @@ const chartPage = [
   const heightStyle = res == '' ? "h-screen" : "h-full"
 
   return (
-    <main id="goated" className={`bg-[url('/cover2.jpg')] items-center flex flex-col w-screen ${heightStyle} gap-y-16`}>
-      <div class="grid grid-cols-2 fixed top-8 bg-gray-800 w-[15rem] h-12 rounded-xl flex-row place-content-evenly z-20 opacity-90">
+    <main id="goated" className={`bg-[url('/cover.jpg')] items-center flex flex-col h-screen bg-no-repeat bg-cover gap-y-16`}>
+      <div class="grid grid-cols-2 fixed top-8 bg-gray-900 w-[15rem] h-12 rounded-xl flex-row place-content-evenly z-20 opacity-90">
         { inputPage ? <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center ml-3"></div>
         : <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center mr-3 justify-self-end"></div>
         }
