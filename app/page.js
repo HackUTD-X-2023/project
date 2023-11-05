@@ -5,13 +5,13 @@ import { useRouter } from 'next/navigation'
 export default function Home() {
   const router = useRouter();
   return (
+    <>
     <main className="bg-family h-screen bg-no-repeat bg-cover relative z-10">
-      <div className="bg-black opacity-60 backdrop-blur-sm h-full z-20">
-          <button className="absolute right-100 top-80 bg-red z-30" type="button" onClick={() => router.push('/form')}>
-              Find out now!
-          </button>
-      </div>
-      <div className="static"></div>
+      <div class=""></div>
+      <button className="rounded-2xl text-lg text-white bg-sky-400 h-16 w-64" type="button" onClick={() => router.push('/form')}>
+        GET STARTED!
+      </button>
     </main>
+    </>
   )
 }
