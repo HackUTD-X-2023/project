@@ -21,5 +21,5 @@ To deploy, use Vercel!
 
 ## Future Plans
 
-We aim to improve functionality by adding functionality to suggest houses near a specific zip code for a particular customer
+We aim to improve functionality by adding functionality to suggest houses near a specific zip code for a particular customer.
 
