@@ -8,7 +8,7 @@ import data from '/public/data.json'
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Data() {
-    const formattedData1 = {
+    const formattedDataSuccess = {
         labels: ['Qualified', 'Did not Qualify'],
         datasets: [{
             label: 'Number of People',
@@ -27,15 +27,40 @@ export default function Data() {
     };
     for(var i = 0; i < 10000; i++) {
         if(data[i].Success === 1) {
-            formattedData1.datasets[0].data[0]++;
+            formattedDataSuccess.datasets[0].data[0]++;
         }
         else {
-            formattedData1.datasets[0].data[1]++;
+            formattedDataSuccess.datasets[0].data[1]++;
+        }
+    }
+    const formattedDataLossReasons = {
+        labels: ['Qualified', 'Did not Qualify'],
+        datasets: [{
+            label: 'Number of People',
+            data: [0,0],
+            backgroundColor:[
+                'rgba(0, 255, 0, 0.2)',
+                'rgba(255, 0, 0, 0.2)',
+              ],
+              borderColor:[
+                'rgba(0, 255, 0, 1)',
+                'rgba(255, 0, 0, 1)',
+              ],
+              borderwidth: 1,
+            },
+        ],
+    };
+    for(var i = 0; i < 10000; i++) {
+        if(data[i].Success === 1) {
+            formattedDataSuccess.datasets[0].data[0]++;
+        }
+        else {
+            formattedDataSuccess.datasets[0].data[1]++;
         }
     }
   return (
     <main>
-          <Doughnut data={formattedData1}></Doughnut>
+          <Doughnut data={formattedDataSuccess}></Doughnut>
     </main>
   )
 }
