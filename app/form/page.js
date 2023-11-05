@@ -91,7 +91,14 @@ export default function Home() {
 
   return (
     <main className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
-      <div className="bg-grey-900 m-10 z-10 h-64 w-[128rem]">
+      <div class="fixed top-8 bg-gray-800 w-[24rem] h-12 rounded-xl flex-row content-evenly">
+        <button className="nav-button self-center" name="input">Input</button>
+        <button className="nav-button self-center" name="results">Results</button>
+        <button className="nav-button self-center" name="data">Data</button>
+      </div>
+
+      
+      <div className="bg-grey-900 mt-24 h-64 w-[128rem]">
         <form className='flex flex-row justify-center gap-8'>
           <div class="flex-col">
 
@@ -166,7 +173,7 @@ export default function nav(){
   return(
     <>
     <div className="static bg-[url('/cover2.jpg')]"></div>
-    <div className="fixed flex flex-row justify-start w-screen">
+    <div className="fixed flex flex-row justify-start ml-6 h-screen">
     <div className="fixed flex w-[16rem] flex-col justify-center h-screen ml-6">
       <div className="bg-slate-400 h-[24rem] rounded-3xl flex flex-col justify-evenly">
         <button className="nav-button text-black" name="input">Input</button>
@@ -174,7 +181,7 @@ export default function nav(){
         <button className="nav-button" name="data">Data</button>
       </div>
     </div>
-    <div className="rounded-[24] flex flex-row justify-center w-[128rem]"></div>
+    <div className="rounded-[24] flex flex-row justify-center w-5/6 h-5/6"></div>
     <div className="flex">
       <Home class="result"></Home>
     </div>
