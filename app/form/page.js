@@ -88,41 +88,41 @@ for(var i = 0; i < 4; i++)
 
 export default function Home() {
 
-  const [carPayment, setCarPayment] = useState(0);
+  const [carPayment, setCarPayment] = useState();
   const handleCarPaymentChange = (e) => {
     setCarPayment(e.target.value);
   }
-  const [studentLoan, setStudentLoan] = useState(0);
+  const [studentLoan, setStudentLoan] = useState();
   const handleStudentLoanChange = (e) => {
     setStudentLoan(e.target.value);
   }
 
-  const [mortgage, setMortgage] = useState(0);
+  const [mortgage, setMortgage] = useState();
   const handleMortgageChange = (e) => {
     setMortgage(e.target.value);
   }
 
-  const [creditScore, setCreditScore] = useState(0);
+  const [creditScore, setCreditScore] = useState();
   const handleCreditScoreChange = (e) => {
     setCreditScore(e.target.value);
   }
 
-  const [income, setIncome] = useState(0);
+  const [income, setIncome] = useState();
   const handleIncomeChange = (e) => {
     setIncome(e.target.value);
   }
 
-  const [cardPayment, setCardPayment] = useState(0);
+  const [cardPayment, setCardPayment] = useState();
   const handleCardPaymentChange = (e) => {
     setCardPayment(e.target.value);
   }
 
-  const [homeValue, setHomeValue] = useState(0);
+  const [homeValue, setHomeValue] = useState();
   const handleHomeValueChange = (e) => {
     setHomeValue(e.target.value);
   }
 
-  const [downPayment, setDownPayment] = useState(0);
+  const [downPayment, setDownPayment] = useState();
   const handleDownPaymentChange = (e) => {
     setDownPayment(e.target.value);
   }
