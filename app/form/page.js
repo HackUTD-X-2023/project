@@ -190,22 +190,22 @@ export default function Home() {
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="CarPayment">Monthly Car Payment: </label>
-          <input type="number" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" className='input-field' /><br />
+          <input type="number" placeholder="$0" value={carPayment} onChange={handleCarPaymentChange} name="CarPayment" className='input-field' /><br />
         </div>
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="StudentLoan">Student Loan Payment: </label>
-          <input type="number" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" class="input-field" /><br />
+          <input type="number" placeholder="$0" value={studentLoan} onChange={handleStudentLoanChange} name="StudentLoan" class="input-field" /><br />
         </div>
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="Mortgage">Est. Monthly Mortgage Payment: </label>
-          <input type="number" value={mortgage} onChange={handleMortgageChange} name="Mortgage" class="input-field" /><br />
+          <input type="number" placeholder="$0" value={mortgage} onChange={handleMortgageChange} name="Mortgage" class="input-field" /><br />
         </div>
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="CreditScore">Credit Score: </label>
-          <input type="number" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" className='input-field' /><br />
+          <input type="number" placeholder="0" value={creditScore} onChange={handleCreditScoreChange} name="CreditScore" className='input-field' /><br />
         </div>
 
       </div>
@@ -214,23 +214,23 @@ export default function Home() {
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="Income">Gross Monthly Income: </label>
-          <input type="Number" value={income} onChange={handleIncomeChange} name="Income" className='input-field' /><br />
+          <input type="Number" placeholder="$0" value={income} onChange={handleIncomeChange} name="Income" className='input-field' /><br />
         </div>
 
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="CreditCardPayment">Monthly Credit Card Payment: </label>
-          <input type="number" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" className='input-field' /><br />
+          <input type="number" placeholder="$0" value={cardPayment} onChange={handleCardPaymentChange} name="CreditCardPayment" className='input-field' /><br />
         </div>
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="HomeAppraisedValue">Home Appraised Value: </label>
-          <input type="number" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" className='input-field' /><br />
+          <input type="number" placeholder="$0" value={homeValue} onChange={handleHomeValueChange} name="HomeAppraisedValue" className='input-field' /><br />
         </div>
 
         <div className='flex flex-col gap-x-3'>
           <label htmlFor="DownPayment">Down Payment Amount: </label>
-          <input type="number" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" className='input-field' /><br />
+          <input type="number" placeholder="$0" value={downPayment} onChange={handleDownPaymentChange} name="DownPayment" className='input-field' /><br />
         </div>
       </div>
     </form>
