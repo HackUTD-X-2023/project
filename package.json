@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "flowbite": "^2.0.0",
+    "flowbite-react": "^0.6.4",
     "next": "14.0.1",
     "openai": "^4.15.0",
     "react": "^18",
