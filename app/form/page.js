@@ -85,6 +85,7 @@ export default function Home() {
 
     setRes(resJson.response.choices[0].message.content)
     */
+    setRes("Error fetching personalized summary");
     setLoading(false);
   }
 
