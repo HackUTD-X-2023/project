@@ -154,6 +154,9 @@ export default function Home() {
     e.preventDefault();
     setSubbed(true);
     setLoading(true);
+    await delay(50)
+    if(inputPage)
+      document.getElementById("goated").scrollIntoView({ block: 'end',  behavior: 'smooth' });
     await delay(5000);
     /*
     console.log("Loading: " + loading)
@@ -179,6 +182,9 @@ export default function Home() {
     */
     setRes("Error fetching personalized summary");
     setLoading(false);
+    await delay(50)
+    if(inputPage)
+      document.getElementById("goated").scrollIntoView({ block: 'end',  behavior: 'smooth' });
   }
 
   const inputComp = [<div className="bg-gradient-to-r from-gray-700 to-gray-700 relative mt-24 w-1/2 py-10 px-2 rounded-3xl">
@@ -259,7 +265,7 @@ const chartPage = [
 </div>]
 
   return (
-    <main className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
+    <main id="goated" className="bg-[url('/cover2.jpg')] items-center flex flex-col w-screen gap-y-16">
       <div class="grid grid-cols-2 fixed top-8 bg-gray-800 w-[15rem] h-12 rounded-xl flex-row place-content-evenly z-20 opacity-90">
         { inputPage ? <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center ml-3"></div>
         : <div className="nav-color absolute w-[6rem] rounded-lg h-[2rem] bg-sky-400 z-10 self-center mr-3 justify-self-end"></div>
